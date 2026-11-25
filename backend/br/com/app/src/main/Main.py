@@ -27,6 +27,8 @@ def initialize_application():
   initialize_database()
   main()
 
+
+initialize_application()
+
 if __name__ == "__main__":
-  initialize_application()
   app.run(port=8080)
