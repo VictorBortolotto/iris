@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class ConsultPredctionDto:
+class ConsultPredictionDto:
   id: int
   sepal_length: float
   sepal_width: float

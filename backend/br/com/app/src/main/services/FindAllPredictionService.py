@@ -3,8 +3,8 @@ from utils.ApiResponse import ApiResponse
 from utils.Pagination import Pagination
 
 class FindAllPredictionService():
-  def __init__(self):
-    self.repository = PredictionRepository()
+  def __init__(self, repository=None):
+    self.repository = repository or PredictionRepository()
 
   def find_all_prediction(self, nm_specie):
     if nm_specie == '' or nm_specie is None:

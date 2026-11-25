@@ -2,6 +2,6 @@ from dataclasses import dataclass
 from pydantic import BaseModel
 
 @dataclass
-class PredictionResponse(BaseModel):
+class PredictionResponseDto(BaseModel):
   species: str
   probabilities: dict[str, float]

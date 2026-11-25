@@ -1,5 +1,5 @@
 from database.Database import Database
-from domain.dto.ConsultPredictionDto import ConsultPredctionDto
+from domain.dto.ConsultPredictionDto import ConsultPredictionDto
 from domain.dto.PredictionStatsDto import PredictionStatsDto
 
 class PredictionRepository:
@@ -37,7 +37,7 @@ class PredictionRepository:
     consult_list = []
     for result in results:
       id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date = result
-      consult_list.append(ConsultPredctionDto(id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date))
+      consult_list.append(ConsultPredictionDto(id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date))
 
     return consult_list
 
@@ -49,7 +49,7 @@ class PredictionRepository:
 
     id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date = result
 
-    return ConsultPredctionDto(id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date)
+    return ConsultPredictionDto(id,sepal_length,sepal_width,petal_length,petal_width,specie,iris_setosa,iris_versicolor,iris_virginica,query_date)
   
   def prediction_stats(self):
     result = self.database.find_by_id("""

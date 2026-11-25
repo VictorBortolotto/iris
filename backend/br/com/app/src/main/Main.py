@@ -13,8 +13,6 @@ CORS(app, resources={
     }
 })
 
-##swagger = SwaggerConfig().config(app)
-
 def create_database_folder():
   CreateFolderDatabase.create_folder()
 
@@ -24,9 +22,11 @@ def initialize_database():
 def main():
   PredictionController(app)
 
-create_database_folder()
-initialize_database()
-main()
+def initialize_application():
+  create_database_folder()
+  initialize_database()
+  main()
 
 if __name__ == "__main__":
+  initialize_application()
   app.run(port=8080)
