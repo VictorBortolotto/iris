@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/snackbar.css">
+</head>
+<body>
+  <script src="../js/snackbar.js"></script>
+  <script src="../js/services.js"></script>
+  <nav class="nav">
+    <ul class="options">
+      <li class="option">
+        <button class="button" onclick="onClickSearch()">SEARCH</button>
+      </li>
+      <li class="option">
+        <button class="button" onclick="onClickHistory()">HISTORY</button>
+      </li>
+    </ul>
+  </nav>
+  <header class="header">
+    <img src="../assets/iris_logo.png" alt="" srcset="" class="logo">
+  </header>
+  <section class="section">
+    <div class="stats">
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">Total</legend><div class="stat-text" id="total-stat"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">Setosa</legend><div class="stat-text" id="setosa-total"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">% Setosa</legend><div class="stat-text" id="setosa-perc"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">Versicolor</legend><div class="stat-text" id="versicolor-total"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">% Versicolor</legend><div class="stat-text" id="versicolor-perc"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">Virginica</legend><div class="stat-text" id="virginica-total"></div></fieldset></div>
+      <div class="stat-card"><fieldset class="stat"><legend class="stat-legend">% Virginica</legend><div class="stat-text" id="virginica-perc"></div></fieldset></div>
+    </div>
+    <div class="prediction" id="prediction">
+      <div class="prediction-card">
+        <fieldset class="prediction-form">
+          <legend class="stat-legend">Prediction</legend>
+          <div class="form">
+            <label for="" class="label">Sepal length</label>
+            <input type="text" class="input" placeholder="Ex.: 5.9" id="sepal-length-input">
+            <label for="" class="label">Sepal width</label>
+            <input type="text" class="input" placeholder="Ex.: 3.5" id="sepal-width-input">
+            <label for="" class="label">Petal length</label>
+            <input type="text" class="input" placeholder="Ex.: 2.4" id="petal-length-input">
+            <label for="" class="label">Petal width</label>
+            <input type="text" class="input" placeholder="Ex.: 1.3" id="petal-width-input">
+            <div class="form-footer">
+              <button class="send" onclick="prediction()">
+                SEND
+              </button>
+            </div>
+          </div>
+          <div class="form">
+            <label for="" class="label">Specie</label>
+            <input type="text" class="input" disabled placeholder="Ex.: Iris Versicolor" id="specie">
+            <label for="" class="label">Iris Setosa</label>
+            <input type="text" class="input" disabled placeholder="Ex.: 0.36" id="setosa-probalitie">
+            <label for="" class="label">Iris Versicolor</label>
+            <input type="text" class="input" disabled placeholder="Ex.: 0.56" id="versicolor-probalitie">
+            <label for="" class="label">Iris Virginica</label>
+            <input type="text" class="input" disabled placeholder="Ex.: 0.06" id="virginica-probalitie">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="history" id="history">
+      <div class="history-card">
+        <ul class="history-predict-list" id="history-list">
+        </ul>
+        <div class="not-found" id="not-found">
+          <img src="../assets/not_found.png" alt="" class="note-not-found-image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="history-search-area" id="history-search-area">
+      <input type="text" class="history-search-input" id="search-input" placeholder="Search by specie or id">
+      <button class="history-search-button" id="search-button" onclick="onClickSearchButton()">SEARCH</button>
+    </div>
+    <div class="history-page-control" id="history-page-control">
+      <button class="page-button" id="previous" onclick="onClickPrevious()">
+        <img src="../assets/previous.svg" alt="" class="button-image">
+      </button>
+      <div class="pages-caption" id="pages-caption">1 / 1</div>
+      <button class="page-button" id="next" onclick="onClickNext()">
+        <img src="../assets/next.svg" alt="" class="button-image">
+      </button>
+    </div>
+  </footer>
+  <div id="snackbar"></div>
+  <script src="../js/component/card.component.js"></script>
+  <script src="../js/page.js"></script>
+  <script>
+    getStatsIris()
+  </script>
+
+</body>
+</html>

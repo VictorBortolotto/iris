@@ -1,0 +1,45 @@
+body {
+  display: grid;
+  grid-template-areas: "header header"
+  "nav section"
+  "nav footer";
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 10% 80% 10%;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(33, 209, 127);
+  grid-area: header;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(33, 209, 127);
+  grid-area: nav;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  grid-area: section;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  grid-area: footer;
+}

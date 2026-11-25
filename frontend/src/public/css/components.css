@@ -1,0 +1,351 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  row-gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: rgb(66, 212, 144);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  height: 15%;
+  border-radius: 5px;
+  column-gap: 5px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: row;
+  width: 14%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-legend {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(161, 161, 161);
+}
+
+.stat-text {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(161, 161, 161);
+}
+
+.prediction {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+.prediction-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.prediction-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: solid 1px rgb(197, 196, 196);
+  gap: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 85%;
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+  align-items: center;
+  padding: 2%;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  width: 95%;
+  height: 5%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(161, 161, 161);
+}
+
+.input {
+  display: flex;
+  width: 95%;
+  height: 9%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.input:hover {
+  border: solid 1px rgb(180, 180, 180);
+}
+
+.form-footer {
+  display: flex;
+  width: 95%;
+  height: 14%;
+  align-items: center;
+  justify-content: start;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 80%;
+  background-color: rgb(33, 209, 127);
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.logo {
+  margin-left: 2%;
+  width: 12%;
+  height: 100%;
+}
+
+.history {
+  display: none;
+  flex-direction: row;
+  width: 98%;
+  height: 80%;
+}
+
+.history-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.history-predict-list {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50% 50%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+  list-style: none;
+  gap: 5px;
+  padding: 0px;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+}
+
+.history-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: solid 1px rgb(197, 196, 196);
+  color: rgb(161, 161, 161);
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(161, 161, 161);
+}
+
+.specie {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+  height: 100%;
+  margin-left: 10px;
+  border-right: solid 1px rgb(197, 196, 196);
+}
+
+.query-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 15%;
+  border-bottom: solid 1px rgb(197, 196, 196);
+}
+
+.specie-type {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+  height: 100%;
+  margin-left: 10px;
+  border-right: solid 1px rgb(197, 196, 196);
+}
+
+.specie-probabilitie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.history-search-area {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin-left: 10px;
+  column-gap: 5px;
+}
+
+.history-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 65%;
+  background-color: rgb(33, 209, 127);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.history-search-input {
+  display: flex;
+  width: 60%;
+  height: 50%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 1px rgb(197, 196, 196);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 2%;
+}
+
+.history-page-control {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  margin-left: 10px;
+  column-gap: 5px;
+}
+
+.pages-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.page-button {
+  display: flex;
+  width: 10%;
+  height: 80%;
+  border-radius: 90%;
+  border: none;
+  background: transparent; 
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.note-not-found-image {
+  display: flex;
+  width: 45%;
+  height: 85%;
+}
